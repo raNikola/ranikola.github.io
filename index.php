@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content="HTML, CSS, PHP, LARAVEL, JAVASCRIPT, Developer">
     <meta name="author" content="Nikola Randjelovic">
-    <!--<link rel="manifest" href="./manifest.json">-->
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#317EFB"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="apple-touch-icon" href="/favicon.ico">
