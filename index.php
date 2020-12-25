@@ -27,9 +27,9 @@
     <link type="text/css" rel="preload" as="style" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--Import materialize.css-->
-    <link type="text/css" rel="preload" as="style" href="assets/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" as="style" href="assets/css/materialize.min.css" media="screen,projection"/>
 
-    <link type="text/css" rel="preload" as="style" href="assets/css/main_style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/main_style.css">
 
 </head>
 <body>
