@@ -6812,7 +6812,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           var _entry = matchingData[i];
           var $autocompleteOption = $('<li></li>');
           if (!!_entry.data) {
-            $autocompleteOption.append("<img src=\"" + _entry.data + "\" class=\"right circle\"><span>" + _entry.key + "</span>");
+            $autocompleteOption.append("<images src=\"" + _entry.data + "\" class=\"right circle\"><span>" + _entry.key + "</span>");
           } else {
             $autocompleteOption.append('<span>' + _entry.key + '</span>');
           }
@@ -7214,7 +7214,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         _this40._animateCaptionIn(el, 0);
       });
 
-      // Move img src into background-image
+      // Move images src into background-image
       _this40.$slides.find('img').each(function (el) {
         var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
         if ($(el).attr('src') !== placeholderBase64) {
@@ -11921,7 +11921,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         // add icons
         var iconUrl = option.getAttribute('data-icon');
         if (!!iconUrl) {
-          var imgEl = $("<img alt=\"\" src=\"" + iconUrl + "\">");
+          var imgEl = $("<images alt=\"\" src=\"" + iconUrl + "\">");
           liEl.prepend(imgEl);
         }
 
