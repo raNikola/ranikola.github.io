@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>cv.ranikola.dev</title>
+    <link rel="canonical" href="https://web.dev/preload-optional-fonts/">
     <meta name="description"
           content="I am Software Developer from Serbia and I am here to make my life more interesting because I love challenges and mainly develop websites."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,12 +24,12 @@
         "description": "I am Software Developer from Serbia and I am here to make my life more interesting because I love challenges and mainly develop websites."
     }</script>
     <!--Import Google Icon Font-->
-    <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="preload" as="style" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="preload" as="style" href="assets/css/materialize.min.css" media="screen,projection"/>
 
-    <link rel="stylesheet" href="assets/css/main_style.css">
+    <link type="text/css" rel="preload" as="style" href="assets/css/main_style.css">
 
 </head>
 <body>
@@ -113,24 +114,28 @@
                     <div class="about__social light-green col s12">
                         <ul class="about__social-list row">
                             <div class="col s1 m1 offset-m4 center-align">
-                                <a href="https://github.com/ranikola" target="_blank">
-                                    <i class="im im-github white-text"></i>
-                                </a>
+                                <a href="https://github.com/ranikola"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                ><i class="im im-github white-text"></i></a>
                             </div>
                             <div class="col s1 m1 center-align">
-                                <a href="https://www.linkedin.com/in/ranikola" target="_blank">
-                                    <i class="im im-linkedin white-text"></i>
-                                </a>
+                                <a href="https://www.linkedin.com/in/ranikola"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                ><i class="im im-linkedin white-text"></i></a>
                             </div>
                             <div class="col s1 m1 center-align">
-                                <a href="https://twitter.com/ranikola" target="_blank">
-                                    <i class="im im-twitter white-text"></i>
-                                </a>
+                                <a href="https://twitter.com/ranikola"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                ><i class="im im-twitter white-text"></i></a>
                             </div>
                             <div class="col s1 m1 center-align">
-                                <a href="https://www.instagram.com/ranikola" target="_blank">
-                                    <i class="im im-instagram white-text"></i>
-                                </a>
+                                <a href="https://www.instagram.com/ranikola"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                ><i class="im im-instagram white-text"></i></a>
                             </div>
                         </ul>
                     </div>
