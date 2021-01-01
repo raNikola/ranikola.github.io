@@ -191,6 +191,51 @@ main {
       }
     }
   }
+
+  .expirience {
+    .timeline {
+      &__bar {
+        content: '';
+        width: 4px;
+        height: 1500px;
+        opacity: .3;
+        margin-left: -2px;
+        position: absolute;
+        left: 50%;
+        border-radius: 2px;
+      }
+
+      &__arrow {
+        top: 60px;
+        width: 12px;
+        height: 41px;
+        display: block;
+        position: absolute;
+
+        &-left {
+          width: 0;
+          height: 0;
+          border-top: 30px solid transparent;
+          border-bottom: 30px solid transparent;
+
+          border-left: 30px solid blue;
+        }
+
+        &-right {
+          left: -12px;
+          background-position: 0 0;
+
+          &:before {
+            margin-left: 2px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 10px solid #fff;
+
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -219,4 +264,8 @@ footer {
       }
     }
   }
+}
+
+.green-border-top {
+  border-top: 5px solid #8bc34a;
 }

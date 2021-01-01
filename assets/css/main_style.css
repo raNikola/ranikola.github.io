@@ -116,6 +116,35 @@ main .skills__brand-logo {
     max-height: 60px;
     height: 50px;
     width: auto; }
+main .expirience .timeline__bar {
+  content: '';
+  width: 4px;
+  height: 1500px;
+  opacity: .3;
+  margin-left: -2px;
+  position: absolute;
+  left: 50%;
+  border-radius: 2px; }
+main .expirience .timeline__arrow {
+  top: 60px;
+  width: 12px;
+  height: 41px;
+  display: block;
+  position: absolute; }
+  main .expirience .timeline__arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid blue; }
+  main .expirience .timeline__arrow-right {
+    left: -12px;
+    background-position: 0 0; }
+    main .expirience .timeline__arrow-right:before {
+      margin-left: 2px;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 10px solid #fff; }
 
 footer .container {
   max-width: 960px; }
@@ -132,5 +161,8 @@ footer .icon__link {
     text-decoration: none; }
   footer .icon__link i {
     line-height: 45px; }
+
+.green-border-top {
+  border-top: 5px solid #8bc34a; }
 
 /*# sourceMappingURL=main_style.css.map */
