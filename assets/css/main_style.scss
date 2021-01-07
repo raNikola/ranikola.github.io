@@ -197,6 +197,8 @@ main {
     position: relative;
 
     .timeline {
+      padding: 0;
+
       &__bar {
         width: 4px;
         height: 3800px;
@@ -213,6 +215,8 @@ main {
         margin-bottom: 1rem;
 
         &-left {
+          padding-left: 0;
+
           .timeline__card {
             margin-right: 1.75rem;
           }
@@ -223,9 +227,12 @@ main {
         }
 
         &-right {
+          padding-right: 0;
+
           .timeline__card {
             margin-left: 1.75rem;
           }
+
           .timeline__dot {
             left: -.25rem;
           }
@@ -368,6 +375,14 @@ footer {
 @media only screen and (max-width: 601px) {
   main .experience .timeline__second {
     margin-top: 0;
+  }
+
+  main .experience .timeline__box-left .timeline__card {
+    margin-right: 0;
+  }
+
+  main .experience .timeline__box-right .timeline__card {
+    margin-left: 0;
   }
 }
 
