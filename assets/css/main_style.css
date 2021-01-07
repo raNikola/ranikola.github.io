@@ -147,6 +147,9 @@ main .experience {
   overflow: hidden;
   position: relative;
 }
+main .experience .timeline {
+  padding: 0;
+}
 main .experience .timeline__bar {
   width: 4px;
   height: 3800px;
@@ -161,11 +164,17 @@ main .experience .timeline__box {
   position: relative;
   margin-bottom: 1rem;
 }
+main .experience .timeline__box-left {
+  padding-left: 0;
+}
 main .experience .timeline__box-left .timeline__card {
   margin-right: 1.75rem;
 }
 main .experience .timeline__box-left .timeline__dot {
   right: -0.4rem;
+}
+main .experience .timeline__box-right {
+  padding-right: 0;
 }
 main .experience .timeline__box-right .timeline__card {
   margin-left: 1.75rem;
@@ -281,6 +290,14 @@ footer .icon__link i {
 @media only screen and (max-width: 601px) {
   main .experience .timeline__second {
     margin-top: 0;
+  }
+
+  main .experience .timeline__box-left .timeline__card {
+    margin-right: 0;
+  }
+
+  main .experience .timeline__box-right .timeline__card {
+    margin-left: 0;
   }
 }
 
