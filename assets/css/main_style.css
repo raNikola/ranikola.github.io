@@ -291,11 +291,15 @@ footer .icon__link i {
   main .experience .timeline__second {
     margin-top: 0;
   }
-
+  main .experience .timeline__box-left {
+    padding: 0;
+  }
   main .experience .timeline__box-left .timeline__card {
     margin-right: 0;
   }
-
+  main .experience .timeline__box-right {
+    padding: 0;
+  }
   main .experience .timeline__box-right .timeline__card {
     margin-left: 0;
   }

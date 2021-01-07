@@ -373,16 +373,24 @@ footer {
 }
 
 @media only screen and (max-width: 601px) {
-  main .experience .timeline__second {
-    margin-top: 0;
-  }
+  main .experience .timeline {
+    &__second {
+      margin-top: 0;
+    }
 
-  main .experience .timeline__box-left .timeline__card {
-    margin-right: 0;
-  }
+    &__box-left {
+      padding: 0;
+      .timeline__card {
+        margin-right: 0;
+      }
+    }
 
-  main .experience .timeline__box-right .timeline__card {
-    margin-left: 0;
+    &__box-right {
+      padding: 0;
+      .timeline__card {
+        margin-left: 0;
+      }
+    }
   }
 }
 
