@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+html .top-btn {
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+html .top-btn i {
+  font-size: 18px;
+}
+
 .header__bg {
   top: 0;
   left: 0;
@@ -6,19 +18,66 @@
   position: absolute;
   z-index: 1;
 }
+.header .navbar__main {
+  z-index: 99;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.header .navbar__main .nav-wrapper {
+  padding-right: 20px;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.header .navbar-static {
+  position: relative;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.header .navbar-fixed {
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.header .navbar-fixed .nav-wrapper {
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.header .navbar li a {
+  position: relative;
+  color: #3d4451;
+  padding: 0;
+  margin: 0 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.header .navbar li a:hover {
+  background-color: transparent;
+}
+.header .navbar li a:hover span {
+  width: 100%;
+  transition: width 0.15s linear 0s;
+}
+.header .navbar li a span {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+  border-radius: 10px;
+  transition: width 0.15s linear 0s;
+}
+.header .navbar .no-border {
+  box-shadow: none;
+  border: 0;
+}
 .header__container {
   max-width: 960px;
   position: relative;
   z-index: 2;
-  margin: 0 auto;
-  background-color: #fff;
+  margin: 50px auto 0;
 }
 .header .about {
-  padding-bottom: 0;
+  padding: 0;
 }
 .header .about__box {
   padding: 0;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 .header .about__profile {
@@ -110,24 +169,24 @@
   color: #fff;
   line-height: 45px;
 }
-
-main .container {
-  max-width: 960px;
-}
-main .intro {
+.header .intro {
   margin-top: 2em;
 }
-main .intro__download_cv a {
+.header .intro__download_cv a {
   font-weight: 600;
 }
-main .intro__download_btn {
+.header .intro__download_btn {
   color: #3d4451;
   background-color: #eee;
 }
-main .intro__article {
+.header .intro__article {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.8;
+}
+
+main .container {
+  max-width: 960px;
 }
 main .skills__card {
   border-top: 5px solid #8bc34a;
@@ -224,7 +283,7 @@ main .experience .timeline__dot {
   background-color: #8bc34a;
   border-radius: 50%;
   top: 4.7rem;
-  z-index: 999999;
+  z-index: 9;
 }
 main .experience .timeline__card {
   padding: 1.6rem;
