@@ -1,3 +1,17 @@
+html {
+  scroll-behavior: smooth;
+
+  .top-btn {
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
 .header {
   &__bg {
     top: 0;
@@ -8,18 +22,78 @@
     z-index: 1;
   }
 
-  &__bar {
+  .navbar {
+    &__main {
+      z-index: 99;
+      animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+
+      .nav-wrapper {
+        padding-right: 20px;
+        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+      }
+    }
+
+    &-static {
+      position: relative;
+      animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    }
+
+    &-fixed {
+      animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+
+      .nav-wrapper {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+
+      }
+    }
+
+    li {
+      a {
+        position: relative;
+        color: #3d4451;
+        padding: 0;
+        margin: 0 15px;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover {
+          background-color: transparent;
+
+          span {
+            width: 100%;
+            transition: width 0.15s linear 0s;
+          }
+        }
+
+        span {
+          position: absolute;
+          left: 0;
+          bottom: 10px;
+          width: 0;
+          height: 3px;
+          border-radius: 10px;
+          transition: width 0.15s linear 0s;
+        }
+      }
+    }
+
+    .no-border {
+      box-shadow: none;
+      border: 0;
+    }
   }
 
   &__container {
     max-width: 960px;
     position: relative;
     z-index: 2;
-    margin: 0 auto;
+    margin: 50px auto 0;
   }
 
   .about {
-    padding-bottom: 0;
+    padding: 0;
 
     &__box {
       padding: 0;
@@ -144,13 +218,6 @@
     }
   }
 
-}
-
-main {
-  .container {
-    max-width: 960px;
-  }
-
   .intro {
     margin-top: 2em;
 
@@ -170,6 +237,13 @@ main {
       font-weight: 300;
       line-height: 1.8;
     }
+  }
+
+}
+
+main {
+  .container {
+    max-width: 960px;
   }
 
   .skills {
@@ -287,7 +361,7 @@ main {
         border-radius: 50%;
         top: 4.7rem;
 
-        z-index: 999999;
+        z-index: 9;
       }
 
       &__card {
