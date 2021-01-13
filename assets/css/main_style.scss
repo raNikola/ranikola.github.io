@@ -23,7 +23,8 @@ html {
   }
 
   .navbar {
-    &__main {
+    &-sticky {
+      position: sticky;
       z-index: 99;
       animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 
@@ -31,11 +32,6 @@ html {
         padding-right: 20px;
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
       }
-    }
-
-    &-static {
-      position: relative;
-      animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     }
 
     &-fixed {
