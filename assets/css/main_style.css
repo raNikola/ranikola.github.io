@@ -188,6 +188,9 @@ html .top-btn i {
 main .container {
   max-width: 960px;
 }
+main .container section h2 {
+  margin-top: 5rem;
+}
 main .skills__card {
   border-top: 5px solid #8bc34a;
   padding: 2rem;
@@ -202,14 +205,17 @@ main .skills__brand-logo img {
   height: 50px;
   width: auto;
 }
-main .experience {
+main .experience,
+main .education {
   overflow: hidden;
   position: relative;
 }
-main .experience .timeline {
+main .experience .timeline,
+main .education .timeline {
   padding: 0;
 }
-main .experience .timeline__bar {
+main .experience .timeline__bar,
+main .education .timeline__bar {
   width: 4px;
   height: 3800px;
   opacity: 0.3;
@@ -219,29 +225,48 @@ main .experience .timeline__bar {
   left: 50%;
   border-radius: 2px;
 }
-main .experience .timeline__box {
+main .experience .timeline__bar,
+main .education .timeline__bar {
+  width: 4px;
+  height: 3800px;
+  opacity: 0.3;
+  margin-left: -1px;
+  margin-top: 30px;
+  position: absolute;
+  left: 50%;
+  border-radius: 2px;
+}
+main .experience .timeline__box,
+main .education .timeline__box {
   position: relative;
   margin-bottom: 1rem;
 }
-main .experience .timeline__box-left {
+main .experience .timeline__box-left,
+main .education .timeline__box-left {
   padding-left: 0;
 }
-main .experience .timeline__box-left .timeline__card {
+main .experience .timeline__box-left .timeline__card,
+main .education .timeline__box-left .timeline__card {
   margin-right: 1.75rem;
 }
-main .experience .timeline__box-left .timeline__dot {
+main .experience .timeline__box-left .timeline__dot,
+main .education .timeline__box-left .timeline__dot {
   right: -0.4rem;
 }
-main .experience .timeline__box-right {
+main .experience .timeline__box-right,
+main .education .timeline__box-right {
   padding-right: 0;
 }
-main .experience .timeline__box-right .timeline__card {
+main .experience .timeline__box-right .timeline__card,
+main .education .timeline__box-right .timeline__card {
   margin-left: 1.75rem;
 }
-main .experience .timeline__box-right .timeline__dot {
+main .experience .timeline__box-right .timeline__dot,
+main .education .timeline__box-right .timeline__dot {
   left: -0.25rem;
 }
-main .experience .timeline__arrow {
+main .experience .timeline__arrow,
+main .education .timeline__arrow {
   width: 30px;
   height: 30px;
   display: block;
@@ -249,34 +274,41 @@ main .experience .timeline__arrow {
   background-color: white;
   top: 4rem;
   z-index: 2;
-  transform: rotate(45deg);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
-main .experience .timeline__arrow::after {
+main .experience .timeline__arrow::after,
+main .education .timeline__arrow::after {
   content: "";
+  display: inline-block;
   position: absolute;
-  width: 50px;
-  height: 25px;
+  width: 43.5px;
+  height: 21.5px;
+  bottom: 12px;
   background-color: white;
   z-index: 100;
-  display: inline-block;
+}
+main .experience .timeline__arrow-left,
+main .education .timeline__arrow-left {
+  transform: rotate(-45deg);
+  right: 1.45rem;
+}
+main .experience .timeline__arrow-left:after,
+main .education .timeline__arrow-left:after {
+  transform: rotate(-45deg);
+  right: 1.5px;
+}
+main .experience .timeline__arrow-right,
+main .education .timeline__arrow-right {
   transform: rotate(45deg);
+  left: 1.45rem;
 }
-main .experience .timeline__arrow-left {
-  right: 1.5rem;
+main .experience .timeline__arrow-right:after,
+main .education .timeline__arrow-right:after {
+  transform: rotate(45deg);
+  left: 1.5px;
 }
-main .experience .timeline__arrow-left:after {
-  top: 11px;
-  right: 0;
-}
-main .experience .timeline__arrow-right {
-  left: 1.5rem;
-}
-main .experience .timeline__arrow-right:after {
-  bottom: 11px;
-  left: 0;
-}
-main .experience .timeline__dot {
+main .experience .timeline__dot,
+main .education .timeline__dot {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -285,7 +317,8 @@ main .experience .timeline__dot {
   top: 4.7rem;
   z-index: 9;
 }
-main .experience .timeline__card {
+main .experience .timeline__card,
+main .education .timeline__card {
   padding: 1.6rem;
   margin: 0.5rem 0 1rem;
 }
@@ -321,7 +354,102 @@ main .experience .timeline__btn-more i {
   font-size: 1.3rem;
   padding-top: 2px;
 }
-
+main .education .timeline__card {
+  min-height: 200px;
+}
+main .education .timeline__second {
+  margin-top: 100px;
+}
+main .education .timeline__fix {
+  margin-top: -100px;
+}
+main .education .timeline__last {
+  margin-top: 100px;
+}
+main .education .timeline__info {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main .education .timeline__info span {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+main .education .timeline__date:before {
+  content: "";
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 5px;
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent;
+  border-left-color: #8dc24c;
+}
+main .education .timeline__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+main .education .timeline__location {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+main .education .timeline__location span {
+  text-transform: capitalize;
+}
+main .education .timeline__show-input {
+  display: none;
+}
+main .education .timeline__show-hidden .timeline__box {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin-bottom: 0;
+}
+main .education .timeline__show-section {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  z-index: 99;
+}
+main .education .timeline__show-btn {
+  position: absolute;
+  top: calc(50% - 27px);
+  left: calc(50% - 27px);
+  line-height: 1.5;
+  z-index: 999;
+  border-radius: 50%;
+}
+main .education .timeline__show-btn i {
+  font-size: 24px;
+}
+main .education .timeline__show-input:checked ~ .timeline__show-hidden .timeline__box {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  margin-bottom: 1rem;
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+main .education .timeline__show-input:checked ~ .timeline__show-section {
+  display: none;
+}
+main .education .timeline__show-input:checked ~ .timeline__last {
+  margin-top: 0;
+}
 footer .container {
   max-width: 960px;
 }
@@ -342,24 +470,37 @@ footer .icon__link i {
   line-height: 45px;
 }
 
-.green-border-top {
+.border-top__green {
   border-top: 5px solid #8bc34a;
+}
+.border-top__lighten-green {
+  border-top: 5px solid #c5e1a5;
+}
+.border-top__darken-green {
+  border-top: 5px solid #558b2f;
 }
 
 @media only screen and (max-width: 601px) {
-  main .experience .timeline__second {
+  main .experience .timeline__second, main .experience .timeline__fix, main .experience .timeline__last,
+main .education .timeline__second,
+main .education .timeline__fix,
+main .education .timeline__last {
     margin-top: 0;
   }
-  main .experience .timeline__box-left {
+  main .experience .timeline__box-left,
+main .education .timeline__box-left {
     padding: 0;
   }
-  main .experience .timeline__box-left .timeline__card {
+  main .experience .timeline__box-left .timeline__card,
+main .education .timeline__box-left .timeline__card {
     margin-right: 0;
   }
-  main .experience .timeline__box-right {
+  main .experience .timeline__box-right,
+main .education .timeline__box-right {
     padding: 0;
   }
-  main .experience .timeline__box-right .timeline__card {
+  main .experience .timeline__box-right .timeline__card,
+main .education .timeline__box-right .timeline__card {
     margin-left: 0;
   }
 }
