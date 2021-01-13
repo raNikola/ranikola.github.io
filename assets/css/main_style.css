@@ -447,6 +447,7 @@ main .education .timeline__show-input:checked ~ .timeline__show-section {
 main .education .timeline__show-input:checked ~ .timeline__last {
   margin-top: 0;
 }
+
 footer .container {
   max-width: 960px;
 }
