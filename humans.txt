@@ -1,0 +1,9 @@
+/* TEAM */
+Owner: Nikola Randjelovic
+Role: Technical Product Leader
+Site: https://cv.ranikola.dev/
+Contact: hello.ranikola@gmail.com
+
+/* SITE */
+Purpose: Personal portfolio for technical product leadership, B2B SaaS platforms, and product execution experience.
+Language: English
