@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-theme="light"><head>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
@@ -9,7 +9,24 @@
     
     <meta name="author" content="Nikola Randjelovic">
     <meta name="application-name" content="Nikola Randjelovic CV">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-AAQTfd5+OP8ycLR6m9jvys7i2NnGPt9txRw14+P61lA=' https://www.clarity.ms https://scripts.clarity.ms https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.clarity.ms https://c.clarity.ms https://c.bing.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.clarity.ms https://c.clarity.ms https://b.clarity.ms https://cloud.umami.is https://api-gateway.umami.dev; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-AAQTfd5+OP8ycLR6m9jvys7i2NnGPt9txRw14+P61lA=' 'sha256-isrwOtoL/LWUysICZC5l6SL4gZfHS13zBW+EmIThz74=' https://www.clarity.ms https://scripts.clarity.ms https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.clarity.ms https://c.clarity.ms https://c.bing.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.clarity.ms https://c.clarity.ms https://b.clarity.ms https://cloud.umami.is https://api-gateway.umami.dev; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+    <script id="theme-bootstrap">
+        (function () {
+            var storageKey = 'portfolio-theme';
+            var theme = 'light';
+
+            try {
+                var savedTheme = window.localStorage.getItem(storageKey);
+                var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : systemPrefersDark ? 'dark' : 'light';
+            } catch (error) {
+                theme = 'light';
+            }
+
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
+        }());
+    </script>
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="manifest" href="./manifest.json">
     <meta property="og:url" content="https://cv.ranikola.dev/">
@@ -115,43 +132,51 @@
         <li>
             <a href="#about">
                 About
-                <span class="green light-green"></span>
+                <span class="nav-active-bar"></span>
             </a>
         </li>
     
         <li>
             <a href="#skills">
                 Skills
-                <span class="green light-green"></span>
+                <span class="nav-active-bar"></span>
             </a>
         </li>
     
         <li>
             <a href="#experience">
                 Experience
-                <span class="green light-green"></span>
+                <span class="nav-active-bar"></span>
             </a>
         </li>
     
         <li>
             <a href="#references">
                 References
-                <span class="green light-green"></span>
+                <span class="nav-active-bar"></span>
             </a>
         </li>
     
         <li>
             <a href="#interests">
                 Interests
-                <span class="green light-green"></span>
+                <span class="nav-active-bar"></span>
             </a>
         </li>
     
         <li>
             <a href="#contact_me">
                 Contact
-                <span class="green light-green"></span>
+                <span class="nav-active-bar"></span>
             </a>
+        </li>
+    
+        <li class="theme-toggle-item">
+            <button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Switch to dark theme" aria-pressed="false">
+                <span class="site-icon theme-toggle__icon theme-toggle__icon--light" style="--site-icon: url('../icons/lucide/sun.svg')" aria-hidden="true"></span>
+                <span class="site-icon theme-toggle__icon theme-toggle__icon--dark" style="--site-icon: url('../icons/lucide/moon.svg')" aria-hidden="true"></span>
+                <span class="sr-only" data-theme-toggle-label="">Switch to dark theme</span>
+            </button>
         </li>
     <li><a href="#" data-target="about-sidenav" class="sidenav-trigger sidenav-about" aria-label="Open profile menu" aria-controls="about-sidenav" aria-expanded="false">
                         <span class="site-icon" style="--site-icon: url('../icons/lucide/menu.svg')" aria-hidden="true"></span>
@@ -201,6 +226,14 @@
                 
             </a>
         </li>
+    
+        <li class="theme-toggle-item">
+            <button class="theme-toggle sidenav-close" type="button" data-theme-toggle="" aria-label="Switch to dark theme" aria-pressed="false">
+                <span class="site-icon theme-toggle__icon theme-toggle__icon--light" style="--site-icon: url('../icons/lucide/sun.svg')" aria-hidden="true"></span>
+                <span class="site-icon theme-toggle__icon theme-toggle__icon--dark" style="--site-icon: url('../icons/lucide/moon.svg')" aria-hidden="true"></span>
+                <span class="sr-only" data-theme-toggle-label="">Switch to dark theme</span>
+            </button>
+        </li>
     </ul>
     <div class="container header__container">
         <section class="section about" itemscope="" itemtype="https://schema.org/Person" itemid="https://cv.ranikola.dev/#nikola-randjelovic">
@@ -219,7 +252,7 @@
                             </div>
                             <div class="col s12 m7 about__content">
                                 <div class="about__profile-info">
-                                    <div class="about__profile-preword"><span class="light-green white-text">Hello</span></div>
+                                    <div class="about__profile-preword"><span class="light-green text-inverse">Hello</span></div>
                                     <h1 id="about-name" class="about__profile-title" itemprop="name">Nikola Randjelovic</h1>
                                     <h2 id="about-role" class="about__profile-position" itemprop="jobTitle">Technical Product Leader | B2B SaaS Platforms</h2>
                                     <p id="about-summary" class="about__profile-summary">I turn product ambiguity into structure, technical clarity, and decisions that move mission-critical B2B platforms forward.</p>
@@ -432,15 +465,15 @@
                     </div>
 
                     
-                <div id="skills-panel-product-definition" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-product-definition" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Defined MVP and Version 1 scope, turning fragmented feature sets into cohesive product workflows grounded in business goals and technical reality.</p>
                 </div>
             
-                <div id="skills-panel-roadmap-prioritization" class="skills__card__content card-content grey lighten-4 service-expand">
+                <div id="skills-panel-roadmap-prioritization" class="skills__card__content card-content section-surface service-expand">
                     <p>Built roadmaps across quarterly planning, release cycles, and long-term direction while making trade-offs across business priorities, technical realities, and delivery pressure.</p>
                 </div>
             
-                <div id="skills-panel-customer-validation" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-customer-validation" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Worked directly with customers through demos, beta programs, interviews, and feature validation to sharpen product decisions and strengthen launch readiness.</p>
                 </div>
             
@@ -471,15 +504,15 @@
                     </div>
 
                     
-                <div id="skills-panel-systems-thinking" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-systems-thinking" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Worked across APIs, backend logic, and system behavior to make product decisions grounded in how platforms actually work.</p>
                 </div>
             
-                <div id="skills-panel-integrations-evaluation" class="skills__card__content card-content grey lighten-4 service-expand">
+                <div id="skills-panel-integrations-evaluation" class="skills__card__content card-content section-surface service-expand">
                     <p>Led vendor API analysis, feasibility assessment, integration direction, and accelerated technical research with engineering teams to shape implementation decisions.</p>
                 </div>
             
-                <div id="skills-panel-architecture-collaboration" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-architecture-collaboration" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Worked alongside engineering leadership on architecture planning, technical trade-offs, and implementation decisions that shaped product outcomes.</p>
                 </div>
             
@@ -510,15 +543,15 @@
                     </div>
 
                     
-                <div id="skills-panel-cross-functional-leadership" class="skills__card__content card-content grey lighten-4 service-expand">
+                <div id="skills-panel-cross-functional-leadership" class="skills__card__content card-content section-surface service-expand">
                     <p>Led execution across a 40-person technical organization spanning frontend, backend, mobile, QA, and design while driving delivery discipline, organizational leadership, and cross-functional execution.</p>
                 </div>
             
-                <div id="skills-panel-delivery-orchestration" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-delivery-orchestration" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Coordinated execution across multiple teams by managing dependencies, resolving blockers, and keeping delivery aligned through change and shifting priorities.</p>
                 </div>
             
-                <div id="skills-panel-release-readiness" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-release-readiness" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Owned release scope, QA readiness, and go-live decisions from beta through production, including incident response and post-launch planning.</p>
                 </div>
             
@@ -549,15 +582,15 @@
                     </div>
 
                     
-                <div id="skills-panel-market-analysis" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-market-analysis" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Analyzed competitive landscapes, customer needs, and market signals to inform product priorities and commercial positioning.</p>
                 </div>
             
-                <div id="skills-panel-pricing-monetization" class="skills__card__content card-content grey lighten-4 service-expand">
+                <div id="skills-panel-pricing-monetization" class="skills__card__content card-content section-surface service-expand">
                     <p>Contributed to pricing, subscription logic, and monetization decisions for operational SaaS platforms.</p>
                 </div>
             
-                <div id="skills-panel-stakeholder-leadership" class="skills__card__content card-content grey lighten-4 service-expand" hidden="">
+                <div id="skills-panel-stakeholder-leadership" class="skills__card__content card-content section-surface service-expand" hidden="">
                     <p>Aligned executive stakeholders, business leadership, and engineering teams to drive product direction, prioritization, and execution decisions.</p>
                 </div>
             
@@ -1241,7 +1274,7 @@
                 </div>
 
                 <div class="card-action references__author">
-                    <div class="references__avatar light-green white-text">
+                    <div class="references__avatar light-green">
                         <img src="assets/images/recomendations/ivan_stoiljkovic.jpg" alt="Ivan Stoiljkovic" width="100" height="100" loading="lazy" decoding="async">
                     </div>
 
@@ -1262,7 +1295,7 @@
                 </div>
 
                 <div class="card-action references__author">
-                    <div class="references__avatar light-green white-text">
+                    <div class="references__avatar light-green">
                         <img src="assets/images/recomendations/camille_boujassy.jpg" alt="Camille Boujassy" width="100" height="100" loading="lazy" decoding="async">
                     </div>
 
@@ -1283,7 +1316,7 @@
                 </div>
 
                 <div class="card-action references__author">
-                    <div class="references__avatar light-green white-text">
+                    <div class="references__avatar light-green">
                         <img src="assets/images/recomendations/tarik_alikadic.jpg" alt="Tarik Alikadic" width="100" height="100" loading="lazy" decoding="async">
                     </div>
 
@@ -1304,7 +1337,7 @@
                 </div>
 
                 <div class="card-action references__author">
-                    <div class="references__avatar light-green white-text">
+                    <div class="references__avatar light-green">
                         <img src="assets/images/recomendations/alen_veljan.jpg" alt="Alen Veljan" width="100" height="100" loading="lazy" decoding="async">
                     </div>
 
@@ -1652,10 +1685,10 @@
     </ul>-->
 
 </main>
-<footer class="page-footer grey lighten-3">
-    <div class="footer-copyright grey-text center-align text-darken-2">
+<footer class="page-footer site-footer section-surface-muted">
+    <div class="footer-copyright site-footer__copyright center-align">
         <div class="container">
-            Technical Product Leader · <a href="mailto:hello.ranikola@gmail.com" class="grey-text text-darken-2" aria-label="Email Nikola Randjelovic" data-analytics="email_click">hello.ranikola@gmail.com</a>
+            Technical Product Leader · <a href="mailto:hello.ranikola@gmail.com" class="site-footer__link" aria-label="Email Nikola Randjelovic" data-analytics="email_click">hello.ranikola@gmail.com</a>
             &nbsp;|&nbsp; © 2021 – <span id="footer-year"></span> Nikola Randjelovic. All rights reserved.
         </div>
     </div>
